@@ -28,3 +28,14 @@ You may need to modify the lines that specify numbebr of GPUs to use in the `tra
 
 
 
+#### Demo: reduce LeNet CNN
+
+A demo script showing how to specify layers to be reduced/pruned in a LeNet-style toy CNN is given in `demo_reduce_cifar_cnn.py`. The top of the script defines several variables where a user can specify the experiment settings along with explanatory comments.  This removes a specified number of filters using either the norm-based or the cosine-similarity-based criterion, and reports the test accuracy of the network before and after the pruning operation. 
+
+
+
+
+
+
+
+
