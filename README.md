@@ -3,10 +3,15 @@
 ### Setup
 
 * (Install Anaconda)[https://conda.io/docs/user-guide/install/linux.html] if not already installed in the system.
-* Create an Anaconda environment: `conda create -n resnet-demo python=2.7` and activate it: `source activate resnet-demo`.
+* Create an Anaconda environment: `conda create -n cnn-duplicates python=2.7` and activate it: `source activate cnn-duplicates`.
 * Install PyTorch and TorchVision inside the Anaconda environment. First add a channel to conda: `conda config --add channels soumith`. Then install: `conda install pytorch torchvision cuda80 -c soumith`.
 * Setup from cloned repo: 
-    -    
+    * `git clone git@github.com:AruniRC/cnn-redundant-filters.git`
+    * Inside the local folder for this repo, add the submodule forked from [WideResNet-pytorch](https://github.com/xternalz/WideResNet-pytorch):  `git submodule add https://github.com/AruniRC/WideResNet-pytorch WideResNet-pytorch` 
+* Dependencies:
+    * `pip install tensorboard_logger`
+    * `conda install -c conda-forge tensorboard`
+    * 
 
 
 
@@ -15,10 +20,5 @@
 
 ### Usage
 
-Experimental settings such as learning rates are defined in `config.py`, each setting being a numbered key in a Python dict.
-
-The demo code is in the file `train_resnet_demo.py`. The command for running it on GPU:0 and using configuration:1 is `python train_resnet_demo.py -g 0 -c 1`. The code has detailed comments and serves as a walkthrough for training deep networks on custom datasets in PyTorch.
-
-Each time the training script is run, a new output folder with a timestamp is created by default under `./logs` -- `logs/MODEL-CFG-TIMESTAMP/`. Under an experiment's log folder the settings for each experiment can be viewed in `config.yml`; metrics such as the training and validation losses are updated in `log.csv`. 
 
 

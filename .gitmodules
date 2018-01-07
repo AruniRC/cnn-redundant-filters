@@ -1,0 +1,3 @@
+[submodule "WideResNet-pytorch"]
+	path = WideResNet-pytorch
+	url = https://github.com/AruniRC/WideResNet-pytorch
