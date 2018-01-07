@@ -8,7 +8,7 @@
 * Setup from cloned repo: 
     * `git clone git@github.com:AruniRC/cnn-redundant-filters.git`
     * Inside the local folder for this repo, add the submodule forked from [WideResNet-pytorch](https://github.com/xternalz/WideResNet-pytorch):  `git submodule add https://github.com/AruniRC/WideResNet-pytorch WideResNet-pytorch` 
-* Dependencies:
+* [TODO] Dependencies:
     * `pip install tensorboard_logger`
     * `conda install -c conda-forge tensorboard`
     * 
@@ -19,6 +19,12 @@
 
 
 ### Usage
+
+#### Train WideResNet
+
+Enter the `WideResNet-pytorch` module folder and run: `python train.py --dataset cifar10 --layers 28 --widen-factor 10 --tensorboard`.
+
+You may need to modify the lines that specify numbebr of GPUs to use in the `train.py` script. By default it trains for 200 epochs on CIFAR-10 and saves logs for TensorBoard. 
 
 
 
